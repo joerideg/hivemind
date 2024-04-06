@@ -4,5 +4,4 @@ CREATE TABLE IF NOT EXISTS Notes (
   content VARCHAR(100) UNIQUE NOT NULL
 );
 
-insert into Notes (title content)
-  values ("My Note", "This is joeri's note")
+INSERT INTO Notes (title, content) VALUES ('My Note', 'This is a note from Joeri');

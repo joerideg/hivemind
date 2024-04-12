@@ -1,28 +1,18 @@
-# Collaborative Notes App
+# Chat App
 
-This monorepo contains all the components for a collaborative, multiplayer note taking web application. It is composed of multiple components that work together:
+This repository contains all the components for a realtime chat application. The
+application is composed of multiple components that work together:
 
-- A Database for storing notes and user data
-- CLI for managing the notes and data directly
-- Backend servers providing APIs 
-- Frontend UIs for interacting with notes
-- Docker Compose to run all the services together
-- Dockerfiles to build images for each component
+- Databases for storing chats, users and other data
+- Services providing access to the data
+- Clients to interact with the services such as web-based UIs
+- Containers and tooling to deploy and run all the services together
 
 ## Packages
 
-- `database/` - Database schema and migrations 
-- `cli/` - Command line interface tool
-- `server/` - Backend web servers (REST API, WebSocket, etc)
-- `web/` - Frontend web UIs (React, Vue, etc)
-
-## Architecture
-
-The high-level architecture is:
-
-- CLI manages the database schema migrations
-- Backends load/save data in the database
-- Frontends communicate with backend APIs
+- `db/` - Database schema and migrations
+- `servers/` - Backend web servers (REST API, WebSocket, etc)
+- `clients/` - Frontend web UIs (React, Vue, etc)
 
 ## Setup
 
@@ -31,17 +21,17 @@ The high-level architecture is:
 3. Run `docker compose up` to start all the services.
 4. Access the web UI at `http://localhost:3000`
 
-## Deployment 
-
-This app is deployed using the Docker images on Railway.app:
-
-- Push the Docker images to the Railway container registry
-- Railway runs the appropriate services based on the image
-- Database is provisioned by Railway PostgreSQL service
-
-See the `railway.yml` file for more details.
-
 ## License
 
 This project is licensed under the MIT License. See `LICENSE` file for details.
 
+## Disclaimer
+
+This project exists for my own learning purposes. I'm using it to learn about
+many aspects of software engineering in my personal time. This is open source
+just because someone might find it usefull somewhere along the way just by
+looking at the code, git log or other aspects of this repository. **Be aware:
+any code or component can be broken or insecure at any point in time and might
+never get fixed. I offer no support in any form, nor can I be held accountable
+for your use of any of this code.** I do welcome any feedback to contents in
+this repository purely for my learning process.

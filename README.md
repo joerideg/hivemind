@@ -10,7 +10,6 @@ application is composed of multiple components that work together:
 
 ## Packages
 
-- `db/` - Database schema and migrations
 - `servers/` - Backend web servers (REST API, WebSocket, etc)
 - `clients/` - Frontend web UIs (React, Vue, etc)
 
@@ -35,3 +34,14 @@ any code or component can be broken or insecure at any point in time and might
 never get fixed. I offer no support in any form, nor can I be held accountable
 for your use of any of this code.** I do welcome any feedback to contents in
 this repository purely for my learning process.
+
+
+# Phases
+- Setup web server with integrated database
+- Split server and database instance
+- Set up a database failover strategy for single database, cold vs warm vs hot standby
+- Add frontend client
+- Build load balancer and deploy it to work between the client and server so servers can scale horizontally
+- Build a Client-Side-Cache layer in the client
+- Build a Server-Side-Cache layer in the server 
+- Build a sharding layer to scale the database horizontally (use available frameworks / libs)

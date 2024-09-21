@@ -1,14 +1,11 @@
 services:
   db:
     build:
-      dockerfile: ./db/Dockerfile
+      context: ./db
+      dockerfile: ./Dockerfile
     container_name: hivemind-db
     env_file: 
       - .env
     ports:
       - ${POSTGRES_PORT}:5432
     restart: always
-    volumes:
-      - db_data:/var/lib/postgresql/data
-volumes:
-  db_data:

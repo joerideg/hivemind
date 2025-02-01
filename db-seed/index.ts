@@ -8,7 +8,7 @@ const { POSTGRES_DB, POSTGRES_PORT, POSTGRES_USER, POSTGRES_PASSWORD } =
 if (!POSTGRES_DB || !POSTGRES_PORT || !POSTGRES_USER || !POSTGRES_PASSWORD) {
   throw new Error('PostgreSQL Variables not provided');
 }
-//
+
 // for query purposes
 const queryClient = postgres({
   host: '0.0.0.0',
